@@ -3,11 +3,11 @@ apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 
 android {
-    compileSdkVersion 27
+    compileSdkVersion Vers.compile_sdk
     defaultConfig {
         applicationId "com.github.satoshun.example.daggerscopeexample"
-        minSdkVersion 25
-        targetSdkVersion 27
+        minSdkVersion Vers.min_sdk
+        targetSdkVersion Vers.target_sdk
         versionCode 1
         versionName "1.0"
     }
@@ -20,7 +20,7 @@ android {
 }
 
 dependencies {
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
-    implementation 'com.android.support:appcompat-v7:27.1.1'
-    implementation 'com.android.support.constraint:constraint-layout:1.1.0'
+    implementation Libs.kotlin
+    implementation Libs.appcompat_v7
+    implementation Libs.constraint_layout
 }
