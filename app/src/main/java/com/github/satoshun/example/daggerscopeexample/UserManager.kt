@@ -4,5 +4,5 @@ import javax.inject.Inject
 
 @UserScope
 class UserManager @Inject constructor() {
-  var userId = 100
+  var value = 100
 }

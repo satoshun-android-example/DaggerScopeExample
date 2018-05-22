@@ -2,7 +2,7 @@ package com.github.satoshun.example.daggerscopeexample.ui.user.sub
 
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
-import com.github.satoshun.example.daggerscopeexample.App
+import com.github.satoshun.example.daggerscopeexample.AndroidInjection2
 import com.github.satoshun.example.daggerscopeexample.R
 import com.github.satoshun.example.daggerscopeexample.UserManager
 import kotlinx.android.synthetic.main.activity_sub.*
@@ -13,11 +13,9 @@ class UserScopedActivity : AppCompatActivity() {
   @Inject lateinit var userManager: UserManager
 
   override fun onCreate(savedInstanceState: Bundle?) {
-    (application as App).userComponent
-        .activityInjector
-        .inject(this)
+    AndroidInjection2.inject(this)
     super.onCreate(savedInstanceState)
     setContentView(R.layout.activity_sub)
-    user_manager.text = userManager.userId.toString()
+    user_manager.text = userManager.value.toString()
   }
 }

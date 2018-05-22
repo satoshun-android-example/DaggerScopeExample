@@ -18,7 +18,6 @@
             </intent-filter>
         </activity>
         <activity android:name=".ui.user.sub.UserScopedActivity"/>
-        <activity android:name=".ui.sub2.NoUserScopedActivity"></activity>
+        <activity android:name=".ui.sub2.NoUserScopedActivity"/>
     </application>
-
 </manifest>
