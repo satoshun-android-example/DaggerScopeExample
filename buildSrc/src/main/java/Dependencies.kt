@@ -31,6 +31,12 @@ object Libs {
   val livedata = "android.arch.lifecycle:livedata:1.1.1"
   val gms = "com.google.android.gms:play-services-location:15.0.0"
 
+  val dagger = "com.google.dagger:dagger:2.16"
+  val dagger_compiler = "com.google.dagger:dagger-compiler:2.16"
+  val dagger_android = "com.google.dagger:dagger-android:2.16"
+  val dagger_android_support = "com.google.dagger:dagger-android-support:2.16"
+  val dagger_android_compiler = "com.google.dagger:dagger-android-processor:2.16"
+
   val junit = "junit:junit:4.12"
   val support_test = "com.android.support.test:runner:1.0.1"
   val espresso = "com.android.support.test.espresso:espresso-core:3.0.1"

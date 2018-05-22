@@ -1,6 +1,7 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
+apply plugin: "kotlin-kapt"
 
 android {
     compileSdkVersion Vers.compile_sdk
@@ -23,4 +24,10 @@ dependencies {
     implementation Libs.kotlin
     implementation Libs.appcompat_v7
     implementation Libs.constraint_layout
+
+    implementation Libs.dagger
+    implementation Libs.dagger_android_support
+    implementation 'com.android.support.constraint:constraint-layout:1.1.0'
+    kapt Libs.dagger_compiler
+    kapt Libs.dagger_android_compiler
 }
