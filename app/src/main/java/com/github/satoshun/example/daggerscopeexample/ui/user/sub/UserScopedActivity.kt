@@ -1,12 +1,10 @@
-package com.github.satoshun.example.daggerscopeexample.ui.sub
+package com.github.satoshun.example.daggerscopeexample.ui.user.sub
 
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import com.github.satoshun.example.daggerscopeexample.App
 import com.github.satoshun.example.daggerscopeexample.R
 import com.github.satoshun.example.daggerscopeexample.UserManager
-import dagger.Module
-import dagger.android.ContributesAndroidInjector
 import kotlinx.android.synthetic.main.activity_sub.*
 import javax.inject.Inject
 
@@ -22,10 +20,4 @@ class UserScopedActivity : AppCompatActivity() {
     setContentView(R.layout.activity_sub)
     user_manager.text = userManager.userId.toString()
   }
-}
-
-@Module
-interface UserScopedActivityModule {
-  @ContributesAndroidInjector
-  fun contributeUserScopedActivity(): UserScopedActivity
 }

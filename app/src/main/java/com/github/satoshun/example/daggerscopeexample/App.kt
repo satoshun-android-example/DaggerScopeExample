@@ -1,16 +1,11 @@
 package com.github.satoshun.example.daggerscopeexample
 
-import android.app.Activity
-import com.github.satoshun.example.daggerscopeexample.ui.main.MainActivityModule
-import com.github.satoshun.example.daggerscopeexample.ui.sub.UserScopedActivityModule
 import com.github.satoshun.example.daggerscopeexample.ui.sub2.NoUserScopedActivityModule
 import dagger.BindsInstance
 import dagger.Component
 import dagger.Module
 import dagger.Provides
-import dagger.Subcomponent
 import dagger.android.AndroidInjector
-import dagger.android.DispatchingAndroidInjector
 import dagger.android.support.AndroidSupportInjectionModule
 import dagger.android.support.DaggerApplication
 import javax.inject.Inject
@@ -63,23 +58,3 @@ class UserComponentProvider {
 @MustBeDocumented
 @Retention(AnnotationRetention.RUNTIME)
 annotation class UserScope
-
-@UserScope
-@Subcomponent(modules = [
-  AndroidSupportInjectionModule::class,
-  MainActivityModule::class,
-  UserScopedActivityModule::class
-])
-interface UserComponent {
-  @Subcomponent.Builder
-  interface Builder {
-    fun build(): UserComponent
-  }
-
-  val activityInjector: DispatchingAndroidInjector<Activity>
-}
-
-@UserScope
-class UserManager @Inject constructor() {
-  var userId = 100
-}
