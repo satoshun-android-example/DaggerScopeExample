@@ -17,6 +17,8 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".ui.sub.SubActivity"/>
+        <activity android:name=".ui.sub.UserScopedActivity"/>
+        <activity android:name=".ui.sub2.NoUserScopedActivity"></activity>
     </application>
+
 </manifest>
