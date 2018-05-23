@@ -6,7 +6,7 @@ import javax.inject.Inject
 
 
 class App : DaggerApplication() {
-  @Inject lateinit var userComponent: UserComponent
+  @Inject lateinit var userComponent: UserSubcomponent
 
   override fun applicationInjector(): AndroidInjector<out DaggerApplication> {
     return DaggerAppComponent.builder()

@@ -26,5 +26,5 @@ interface AppComponent : AndroidInjector<App> {
 
   override fun inject(app: App)
 
-  val userComponentBuilder: UserComponent.Builder
+  val userComponentBuilder: UserSubcomponent.Builder
 }

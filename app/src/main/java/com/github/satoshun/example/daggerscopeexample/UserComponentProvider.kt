@@ -8,7 +8,7 @@ import javax.inject.Singleton
 class UserComponentProvider {
   @Singleton
   @Provides
-  fun provideUserComponent(builder: UserComponent.Builder): UserComponent {
+  fun provideUserComponent(builder: UserSubcomponent.Builder): UserSubcomponent {
     return builder.build()
   }
 }

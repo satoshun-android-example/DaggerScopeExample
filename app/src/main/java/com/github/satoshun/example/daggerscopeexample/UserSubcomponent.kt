@@ -13,10 +13,10 @@ import dagger.android.support.AndroidSupportInjectionModule
   MainActivityModule::class,
   UserScopedActivityModule::class
 ])
-interface UserComponent {
+interface UserSubcomponent {
   @Subcomponent.Builder
   interface Builder {
-    fun build(): UserComponent
+    fun build(): UserSubcomponent
   }
 
   val activityInjector: DispatchingAndroidInjector<Activity>
