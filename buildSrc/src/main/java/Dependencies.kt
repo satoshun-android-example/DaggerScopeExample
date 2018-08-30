@@ -2,22 +2,17 @@ object Vers {
   val compile_sdk = 28
   val min_sdk = 25
   val target_sdk = 28
-  val agp = "3.1.2"
+  val agp = "3.1.4"
 
-  val kotlin = "1.2.41"
-  val couroutine = "0.22.5"
+  val kotlin = "1.2.61"
   val support_lib = "27.1.1"
-  val ktlint = "0.21.0"
 }
 
 object Libs {
   val android_plugin = "com.android.tools.build:gradle:${Vers.agp}"
   val kotlin_plugin = "org.jetbrains.kotlin:kotlin-gradle-plugin:${Vers.kotlin}"
-  val dokka_plugin = "org.jetbrains.dokka:dokka-android-gradle-plugin:0.9.16"
 
   val kotlin = "org.jetbrains.kotlin:kotlin-stdlib:${Vers.kotlin}"
-  val coroutine = "org.jetbrains.kotlinx:kotlinx-coroutines-core:${Vers.couroutine}"
-  val ui_coroutine = "org.jetbrains.kotlinx:kotlinx-coroutines-android:${Vers.couroutine}"
 
   val design = "com.android.support:design:${Vers.support_lib}"
   val support_v4_core = "com.android.support:support-core-ui:${Vers.support_lib}"
@@ -31,11 +26,11 @@ object Libs {
   val livedata = "android.arch.lifecycle:livedata:1.1.1"
   val gms = "com.google.android.gms:play-services-location:15.0.0"
 
-  val dagger = "com.google.dagger:dagger:2.16"
-  val dagger_compiler = "com.google.dagger:dagger-compiler:2.16"
-  val dagger_android = "com.google.dagger:dagger-android:2.16"
-  val dagger_android_support = "com.google.dagger:dagger-android-support:2.16"
-  val dagger_android_compiler = "com.google.dagger:dagger-android-processor:2.16"
+  val dagger = "com.google.dagger:dagger:2.17"
+  val dagger_compiler = "com.google.dagger:dagger-compiler:2.17"
+  val dagger_android = "com.google.dagger:dagger-android:2.17"
+  val dagger_android_support = "com.google.dagger:dagger-android-support:2.17"
+  val dagger_android_compiler = "com.google.dagger:dagger-android-processor:2.17"
 
   val junit = "junit:junit:4.12"
   val support_test = "com.android.support.test:runner:1.0.1"

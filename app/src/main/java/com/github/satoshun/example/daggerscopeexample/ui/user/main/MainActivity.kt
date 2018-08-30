@@ -24,12 +24,10 @@ class MainActivity : AppCompatActivity() {
     setContentView(R.layout.activity_main)
 
     user_scoped.setOnClickListener {
-      startActivity(Intent(this,
-          UserScopedActivity::class.java))
+      startActivity(Intent(this, UserScopedActivity::class.java))
     }
     no_user_scoped.setOnClickListener {
-      startActivity(Intent(this,
-          NoUserScopedActivity::class.java))
+      startActivity(Intent(this, NoUserScopedActivity::class.java))
     }
   }
 

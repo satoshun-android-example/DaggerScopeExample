@@ -4,30 +4,30 @@ apply plugin: 'kotlin-android-extensions'
 apply plugin: "kotlin-kapt"
 
 android {
-    compileSdkVersion Vers.compile_sdk
-    defaultConfig {
-        applicationId "com.github.satoshun.example.daggerscopeexample"
-        minSdkVersion Vers.min_sdk
-        targetSdkVersion Vers.target_sdk
-        versionCode 1
-        versionName "1.0"
+  compileSdkVersion Vers.compile_sdk
+  defaultConfig {
+    applicationId "com.github.satoshun.example.daggerscopeexample"
+    minSdkVersion Vers.min_sdk
+    targetSdkVersion Vers.target_sdk
+    versionCode 1
+    versionName "1.0"
+  }
+  buildTypes {
+    release {
+      minifyEnabled false
+      proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
     }
-    buildTypes {
-        release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-        }
-    }
+  }
 }
 
 dependencies {
-    implementation Libs.kotlin
-    implementation Libs.appcompat_v7
-    implementation Libs.constraint_layout
+  implementation Libs.kotlin
+  implementation Libs.appcompat_v7
+  implementation Libs.constraint_layout
 
-    implementation Libs.dagger
-    implementation Libs.dagger_android_support
-    implementation 'com.android.support.constraint:constraint-layout:1.1.0'
-    kapt Libs.dagger_compiler
-    kapt Libs.dagger_android_compiler
+  implementation Libs.dagger
+  implementation Libs.dagger_android_support
+
+  kapt Libs.dagger_compiler
+  kapt Libs.dagger_android_compiler
 }

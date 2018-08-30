@@ -1,21 +1,21 @@
 buildscript {
-    repositories {
-        google()
-        jcenter()
-    }
-    dependencies {
-        classpath Libs.android_plugin
-        classpath Libs.kotlin_plugin
-    }
+  repositories {
+    google()
+    jcenter()
+  }
+  dependencies {
+    classpath Libs.android_plugin
+    classpath Libs.kotlin_plugin
+  }
 }
 
 allprojects {
-    repositories {
-        google()
-        jcenter()
-    }
+  repositories {
+    google()
+    jcenter()
+  }
 }
 
 task clean(type: Delete) {
-    delete rootProject.buildDir
+  delete rootProject.buildDir
 }
